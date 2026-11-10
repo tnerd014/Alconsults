@@ -33,7 +33,9 @@ jobs:
           sudo apt-get install -y libarchive-tools libsecret-1-dev libasound2-dev
 
       - name: Install Node Dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install --save-dev electron@33.2.1 electron-builder@24.13.3
 
       - name: Build Web Application Bundle
         run: npm run build
