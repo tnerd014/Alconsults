@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  --bg-canvas: #F5F8FC;
+  --surface-01: #FFFFFF;
+  --surface-02: #F8FAFC;
+  --border-subtle: #E2E8F0;
+  --text-primary: #0B192C;
+  --text-secondary: #64748B;
+  --interactive-primary: #0D5EF4;
+}
+
+/* Base resets for crisp Light Mode across desktop & mobile */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F5F8FC;
+  color: #0B192C;
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Chrome-like modern text selection */
+::selection {
+  background-color: #E8F0FE;
+  color: #1A73E8;
+}
+
+.font-mono, .tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Sticky fixed-in-place page headers explicitly tagged with .sticky-page-header */
+.sticky-page-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(245, 248, 252, 0.96);
+  backdrop-filter: blur(8px);
+}
+
+/* CHROME-GRADE SLEEK SCROLLBARS (Pro Max macOS / Chrome modern style) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.28);
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.55);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #1A73E8;
+}
+
+/* Utility to completely hide scrollbar while preserving smooth scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Chrome / Google style card shadow effects */
+.google-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.google-shadow-md {
+  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+}
+
+.google-shadow-lg {
+  box-shadow: 0 4px 8px 3px rgba(60, 64, 67, 0.15), 0 8px 16px 4px rgba(60, 64, 67, 0.1);
+}

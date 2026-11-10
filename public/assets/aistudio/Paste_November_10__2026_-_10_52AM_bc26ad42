@@ -1,0 +1,2109 @@
+FREELANCE BUSINESS MANAGEMENT SYSTEM
+
+Product Requirements and Development Specification
+
+Document purpose: Complete functional, technical, architectural and UI/UX requirements for building the application.
+
+---
+
+1. PRODUCT OVERVIEW
+
+1.1 Product Vision
+
+Build a comprehensive business management system for an independent software developer and technology service provider.
+
+The system should manage the complete business lifecycle, from the first contact with a potential client to project delivery, payment collection, maintenance and ongoing support.
+
+It should reduce administrative work, automate repetitive processes, organise client relationships, manage projects and provide a clear picture of the financial position of the business.
+
+The system should initially support one business owner but should be designed so that multiple businesses or users can be supported in the future.
+
+1.2 Business Scope
+
+Although the initial business focuses on software development, the system must not be hardcoded around software development alone.
+
+It should support different services, including:
+
+- Custom software development.
+- Mobile application development.
+- Desktop application development.
+- Website development.
+- Business management systems.
+- Database management.
+- IT consultancy.
+- Technical support.
+- Software maintenance.
+- Other professional services.
+
+Services should be configurable by the business owner.
+
+1.3 Supported Platforms
+
+The product will consist of three connected applications.
+
+Platform| Purpose
+Android application| Mobile business management and quick operations
+Desktop application| Full business management and administration
+Client web portal| Client onboarding, project tracking, approvals and payments
+
+Clients should not be required to install an application. They should access their information through secure web links.
+
+---
+
+2. PRODUCT DESIGN PRINCIPLES
+
+These principles must guide the entire development process.
+
+2.1 Minimalist Interface
+
+The application should look like a professionally designed commercial product.
+
+Avoid unnecessary text, descriptions, decorative headings, explanations and visual clutter.
+
+For example:
+
+- Do not write a paragraph explaining what the Dashboard does.
+- Do not add descriptions under every page title.
+- Do not explain obvious buttons with tooltips.
+- Do not display unnecessary empty-state instructions.
+- Do not repeat information already visible elsewhere.
+- Do not use large decorative cards when a compact layout works better.
+
+Use short, meaningful labels.
+
+Instead of:
+
+"Here is an overview of all your business activities and important information."
+
+Use:
+
+"Overview"
+
+Instead of:
+
+"Click this button to create a new client."
+
+Use:
+
+"New Client"
+
+The interface should assume that the user can understand ordinary application conventions.
+
+2.2 Avoid AI-Generated Interface Patterns
+
+Do not make the application look like an AI-generated dashboard.
+
+Avoid:
+
+- Excessive rounded cards.
+- Unnecessary gradients.
+- Random decorative icons.
+- Oversized headings.
+- Excessive empty space.
+- Repetitive descriptions.
+- Artificial-looking statistics.
+- Unnecessary AI assistant panels.
+- Emojis used as interface icons.
+- Decorative charts that communicate no useful information.
+
+Use a restrained, consistent visual system.
+
+The interface should feel intentional, mature and practical.
+
+2.3 Information Density
+
+The desktop application should make efficient use of available screen space.
+
+Where appropriate, use:
+
+- Tables.
+- Compact lists.
+- Split views.
+- Side panels.
+- Tabs.
+- Expandable sections.
+- Contextual action menus.
+- Search and filtering.
+
+Avoid forcing users to open multiple pages to compare information that could reasonably appear together.
+
+2.4 Responsive Design
+
+Do not simply shrink the desktop interface to fit a phone.
+
+Each platform should have a layout designed around its actual use.
+
+---
+
+3. ANDROID AND DESKTOP UI/UX DISTINCTIONS
+
+This is a core product requirement.
+
+3.1 Desktop Application
+
+The desktop application is the primary administration environment.
+
+It should provide access to the full functionality of the system.
+
+Use the larger screen to display:
+
+- Detailed financial information.
+- Complete client records.
+- Full project information.
+- Advanced quotation editing.
+- Detailed payment records.
+- Financial reports.
+- Tables with multiple columns.
+- Document previews.
+- Automation configuration.
+- AI usage and cost monitoring.
+- Advanced settings.
+- Bulk actions.
+- Detailed activity histories.
+
+Desktop Navigation
+
+Use a persistent sidebar.
+
+Suggested navigation:
+
+Workspace
+
+- Dashboard
+- Inbox
+- Leads
+- Clients
+
+Business
+
+- Quotations
+- Projects
+- Invoices
+- Payments
+- Expenses
+- Documents
+
+Management
+
+- Tasks
+- Reports
+- Automations
+- Services
+
+System
+
+- AI Assistant
+- Settings
+
+Navigation should be organised logically. Related modules should be grouped together.
+
+The sidebar should support collapse and expansion.
+
+Use full text and icons for navigation items.
+
+Desktop Buttons
+
+Use icon and text combinations for primary actions.
+
+Examples:
+
+- + New Client
+- + New Project
+- + New Invoice
+- Export
+- Send
+- Save Changes
+
+Icon-only buttons should be reserved for familiar secondary actions, such as:
+
+- Edit.
+- Delete.
+- Search.
+- Close.
+- More options.
+- Refresh.
+
+Use labels where an action may be ambiguous.
+
+Desktop Data Presentation
+
+Use tables for information that benefits from comparison.
+
+Examples:
+
+Clients
+
+- Client
+- Contact
+- Active Projects
+- Outstanding Balance
+- Last Activity
+- Status
+
+Invoices
+
+- Invoice Number
+- Client
+- Issue Date
+- Due Date
+- Total
+- Paid
+- Balance
+- Status
+
+Projects
+
+- Project
+- Client
+- Start Date
+- Due Date
+- Progress
+- Status
+
+Allow sorting, searching and filtering.
+
+Do not display every possible column by default. Let users customise visible columns where appropriate.
+
+3.2 Android Application
+
+The Android application should focus on mobility, quick access and important business operations.
+
+It should not contain every desktop feature simply because the desktop has it.
+
+The mobile experience should prioritise:
+
+- Checking business performance.
+- Viewing leads and clients.
+- Responding to enquiries.
+- Checking project status.
+- Recording payments.
+- Creating quick notes.
+- Viewing outstanding invoices.
+- Receiving notifications.
+- Approving or reviewing important actions.
+- Managing tasks.
+- Taking quick actions while away from the office.
+
+Android Navigation
+
+Use a compact navigation system.
+
+Suggested bottom navigation:
+
+1. Home
+2. Clients
+3. Projects
+4. Finance
+5. More
+
+The More section can contain less frequently used modules.
+
+Do not overcrowd the bottom navigation.
+
+Android Buttons
+
+Use icon-only buttons where the action is familiar and the meaning is clear.
+
+Examples:
+
+- Search icon.
+- Add icon.
+- Edit icon.
+- Filter icon.
+- More options.
+- Close icon.
+
+Use full text and icon buttons for important or less familiar actions.
+
+For example:
+
+- + New Client
+- Create Invoice
+- Record Payment
+- Send Quotation
+
+Do not make important actions difficult to understand simply to save space.
+
+Icon-only buttons must still have accessibility labels.
+
+Android Information Reduction
+
+Some desktop information should be hidden, summarised or moved into secondary screens.
+
+Examples:
+
+Information| Desktop| Android
+Client record| Full details| Important details first
+Financial reports| Full reports| Summary and selected details
+Project management| Full task and milestone view| Current progress and key tasks
+Invoice| Full financial breakdown| Summary and payment details
+Automation rules| Full configuration| Enable, disable and monitor
+AI usage| Detailed cost and token records| Basic usage summary
+Documents| Full document management| Preview, upload and download
+Activity history| Detailed timeline| Recent activity
+Settings| Complete configuration| Essential settings
+
+Do not remove information permanently. Less frequently used information should remain accessible when needed.
+
+Android Interaction
+
+Use mobile-native interaction patterns:
+
+- Bottom sheets for quick actions.
+- Full-screen forms for complex entries.
+- Swipe actions where appropriate.
+- Pull-to-refresh where useful.
+- Native date and time pickers.
+- Compact cards and lists.
+- Search-first access to records.
+
+Avoid placing large desktop tables on mobile.
+
+3.3 Shared Design System
+
+Both applications should share:
+
+- Brand identity.
+- Typography.
+- Colour system.
+- Icon library.
+- Status colours.
+- Component styling.
+- Form behaviour.
+- Validation rules.
+- Terminology.
+- Business logic.
+
+However, components may be arranged differently on each platform.
+
+The goal is consistency, not identical layouts.
+
+---
+
+4. CORE BUSINESS WORKFLOW
+
+The application should support this complete lifecycle:
+
+Lead → Enquiry → Onboarding → Requirements → Quotation → Negotiation → Approval → Agreement → Invoice → Payment → Project → Delivery → Maintenance → Support
+
+Every stage should connect to the next.
+
+Information should not need to be entered repeatedly.
+
+For example, when a quotation is accepted:
+
+1. The lead becomes a client.
+2. The accepted quotation is preserved.
+3. A project is created.
+4. The agreed scope is attached.
+5. Project milestones are generated.
+6. Relevant tasks are created from a template.
+7. The deposit invoice can be generated.
+8. The client portal becomes available.
+9. The business owner receives a notification.
+
+This should be handled through backend automation.
+
+---
+
+5. DASHBOARD
+
+The dashboard should provide an overview of business activity.
+
+5.1 Business Summary
+
+Display:
+
+- Total revenue collected.
+- Outstanding invoices.
+- Active projects.
+- Pending quotations.
+- New leads.
+- Overdue payments.
+- Upcoming deadlines.
+
+Clearly distinguish:
+
+- Quoted amount.
+- Contracted amount.
+- Invoiced amount.
+- Amount collected.
+- Outstanding amount.
+
+These figures must never be treated as interchangeable.
+
+5.2 Recent Activity
+
+Display important events:
+
+- New enquiry.
+- New client.
+- Quotation accepted.
+- Invoice issued.
+- Payment received.
+- Project milestone completed.
+- Client approval received.
+- Project overdue.
+
+5.3 Quick Actions
+
+Provide shortcuts to:
+
+- Create lead.
+- Create client.
+- Create quotation.
+- Create project.
+- Create invoice.
+- Record payment.
+- Add expense.
+
+The dashboard should be configurable in the future.
+
+---
+
+6. CRM: LEADS AND CLIENTS
+
+Leads and confirmed clients should be separate but connected records.
+
+6.1 Lead Management
+
+A lead represents a potential client.
+
+Capture:
+
+- Name.
+- Company name.
+- Email.
+- Phone number.
+- Address.
+- Lead source.
+- Service requested.
+- Initial enquiry.
+- Estimated project value.
+- Expected timeline.
+- Budget, if provided.
+- Assigned status.
+- Date received.
+- Follow-up date.
+- Internal notes.
+
+Lead Statuses
+
+- New Enquiry.
+- Contacted.
+- Discussion.
+- Requirements Gathering.
+- Preparing Quotation.
+- Quotation Sent.
+- Negotiation.
+- Converted.
+- Lost.
+
+Allow the owner to configure additional statuses.
+
+6.2 Lead Conversion
+
+When a lead becomes a client:
+
+- Create the client record.
+- Preserve the lead history.
+- Transfer contact details.
+- Preserve conversations and submitted forms.
+- Link quotations and documents.
+- Record the conversion date.
+
+Avoid creating duplicate client records.
+
+6.3 Client Management
+
+A client record should contain:
+
+- Client identity.
+- Contact information.
+- Company information.
+- Communication preferences.
+- Projects.
+- Quotations.
+- Agreements.
+- Invoices.
+- Payments.
+- Documents.
+- Expenses associated with their projects.
+- Conversations.
+- Notes.
+- Activity history.
+- Portal access information.
+
+A client should have a complete relationship history in one place.
+
+---
+
+7. CLIENT ONBOARDING AND ONLINE FORMS
+
+The system should have its own form builder.
+
+Do not make Google Forms a mandatory dependency.
+
+7.1 Form Builder
+
+Allow the business owner to create forms using:
+
+- Text fields.
+- Email fields.
+- Phone fields.
+- Number fields.
+- Dropdowns.
+- Multiple-choice fields.
+- Checkboxes.
+- Date fields.
+- File uploads.
+- Long-text fields.
+
+Each form should support:
+
+- Required and optional fields.
+- Custom field names.
+- Field ordering.
+- Form title.
+- Submission confirmation.
+- Expiry date.
+- One-time or reusable access.
+- File upload limits.
+- Branding.
+- Submission tracking.
+
+7.2 Form Templates
+
+Provide templates for:
+
+- General enquiry.
+- Mobile application development.
+- Desktop software development.
+- Website development.
+- Business management system.
+- Payroll system.
+- Technical support.
+- Maintenance request.
+
+7.3 Onboarding Information
+
+Depending on the service, collect:
+
+- Client details.
+- Business details.
+- Existing problems.
+- Required solution.
+- Features.
+- Number of users.
+- Preferred platform.
+- Existing software.
+- Integrations.
+- Timeline.
+- Budget.
+- Reference materials.
+- Relevant attachments.
+
+Do not force every client to answer irrelevant questions.
+
+7.4 Form Submission Workflow
+
+When a form is submitted:
+
+1. Validate the submission.
+2. Create or update the lead.
+3. Save the answers.
+4. Save uploaded documents.
+5. Link the submission to the lead.
+6. Generate a structured summary.
+7. Notify the business owner.
+8. Add the submission to the activity timeline.
+
+---
+
+8. WHATSAPP CLIENT COMMUNICATION
+
+WhatsApp should act as another entry point into the CRM.
+
+Use the official WhatsApp Business Platform.
+
+Do not rely on unofficial automation methods.
+
+8.1 WhatsApp Enquiry Assistant
+
+The chatbot should:
+
+- Welcome new enquiries.
+- Understand what the client needs.
+- Identify the requested service.
+- Collect relevant details.
+- Ask for missing information.
+- Create or update leads.
+- Summarise requirements.
+- Preserve conversation history.
+- Notify the business owner.
+
+The conversation should feel natural.
+
+Do not make clients answer a long list of questions in a fixed sequence.
+
+The assistant should understand what the client has already explained and ask only for missing information.
+
+8.2 Conversational Onboarding
+
+For simple projects, the chatbot may collect enough information directly.
+
+For complex projects, it should generate a personalised form link.
+
+The form should contain only the information still required.
+
+Do not ask clients to repeat details they have already supplied.
+
+8.3 Human Handover
+
+The business owner must be able to take over a conversation.
+
+When human control is activated:
+
+- The bot must stop responding.
+- Incoming messages must remain visible.
+- The owner can reply manually.
+- The bot stays paused for that client.
+- The owner can explicitly return control to the bot.
+
+The system must never allow the bot and owner to respond simultaneously.
+
+8.4 AI Communication Boundaries
+
+The chatbot must not independently:
+
+- Set final prices.
+- Approve quotations.
+- Negotiate contractual commitments.
+- Promise delivery dates.
+- Change agreed project scope.
+- Confirm payments without verification.
+- Make commitments on behalf of the business.
+
+These decisions require human approval.
+
+8.5 AI Cost Management
+
+AI should not be used for every incoming message.
+
+Use ordinary application logic for:
+
+- Greetings.
+- Thank-you messages.
+- Basic FAQs.
+- Simple status retrieval.
+- Handover commands.
+- Fixed notifications.
+
+Use AI for:
+
+- Understanding complex messages.
+- Extracting requirements.
+- Summarising conversations.
+- Identifying missing information.
+- Preparing draft quotations.
+- Document extraction.
+- Business queries.
+
+Store structured conversation information so the system does not need to send the entire conversation history to the AI provider every time.
+
+Include:
+
+- Configurable AI model.
+- API key settings.
+- Usage monitoring.
+- Token tracking.
+- Estimated cost.
+- Daily and monthly spending limits.
+- Maximum usage per conversation.
+- Error handling.
+- Manual fallback.
+
+The AI service must be replaceable without rewriting the entire application.
+
+---
+
+9. QUOTATION MANAGEMENT
+
+The quotation module should handle the complete quotation process.
+
+9.1 Quotation Builder
+
+Support:
+
+- Quotation number.
+- Client.
+- Project name.
+- Description.
+- Line items.
+- Quantity.
+- Unit price.
+- Discount.
+- Tax.
+- Subtotal.
+- Total.
+- Validity period.
+- Payment terms.
+- Delivery estimates.
+- Special conditions.
+- Attachments.
+
+Allow reusable quotation templates.
+
+9.2 Quotation Revisions
+
+Every quotation revision must be preserved.
+
+Record:
+
+- Version number.
+- Previous amount.
+- New amount.
+- Changed items.
+- Reason for revision.
+- Date.
+- Person requesting the change.
+- Approval status.
+
+Never overwrite an accepted quotation.
+
+9.3 Client Quotation Link
+
+The client should be able to:
+
+- View the quotation.
+- Download the PDF.
+- Accept the quotation.
+- Reject the quotation.
+- Request changes.
+- Leave comments.
+
+Record the client's decision, date and relevant version.
+
+9.4 Quotation Statuses
+
+- Draft.
+- Sent.
+- Viewed.
+- Negotiation.
+- Accepted.
+- Rejected.
+- Expired.
+- Superseded.
+
+---
+
+10. AGREEMENTS AND SCOPE MANAGEMENT
+
+An accepted quotation should lead to an agreed scope of work.
+
+10.1 Scope of Work
+
+Record:
+
+- Project objectives.
+- Deliverables.
+- Features.
+- Functional requirements.
+- Exclusions.
+- Assumptions.
+- Responsibilities.
+- Timeline.
+- Payment schedule.
+- Acceptance criteria.
+- Support arrangements.
+
+Generate a scope document where required.
+
+10.2 Version Control
+
+Preserve every approved scope version.
+
+The system must identify which scope version applies to the project.
+
+10.3 Change Requests
+
+Clients may request additional work after a project starts.
+
+Record:
+
+- Requested change.
+- Description.
+- Reason.
+- Date.
+- Cost impact.
+- Timeline impact.
+- Approval status.
+
+Approved changes may generate:
+
+- Revised quotation.
+- Additional invoice.
+- Revised milestone.
+- Updated project scope.
+
+Do not silently add additional work to the original agreement.
+
+---
+
+11. INVOICE MANAGEMENT
+
+The invoice module should support:
+
+- Full invoices.
+- Deposit invoices.
+- Milestone invoices.
+- Additional service invoices.
+- Recurring invoices.
+- Credit notes.
+- Cancellation records.
+
+11.1 Invoice Details
+
+Include:
+
+- Invoice number.
+- Client.
+- Project.
+- Issue date.
+- Due date.
+- Description.
+- Line items.
+- Quantity.
+- Unit price.
+- Discount.
+- Tax.
+- Total.
+- Amount paid.
+- Outstanding balance.
+- Payment instructions.
+- Terms and conditions.
+
+Generate downloadable PDF invoices.
+
+11.2 Invoice Statuses
+
+- Draft.
+- Sent.
+- Partially Paid.
+- Paid.
+- Overdue.
+- Cancelled.
+
+11.3 Financial Integrity
+
+- Use decimal arithmetic for monetary values.
+- Generate unique invoice numbers.
+- Preserve financial history.
+- Do not silently delete issued invoices.
+- Maintain an audit trail for changes.
+- Link invoices to projects and quotations.
+
+---
+
+12. PAYMENT MANAGEMENT
+
+Payments should be recorded independently from invoices.
+
+Capture:
+
+- Client.
+- Invoice.
+- Project.
+- Amount.
+- Payment date.
+- Payment method.
+- Transaction reference.
+- Receiving account.
+- Supporting evidence.
+- Notes.
+
+Support:
+
+- Full payment.
+- Partial payment.
+- Multiple payments against one invoice.
+- Overpayments.
+- Refund records.
+- Manual payment confirmation.
+
+When a payment is recorded:
+
+1. Update the invoice balance.
+2. Update the payment status.
+3. Generate a receipt.
+4. Add the payment to the client history.
+5. Update the project financial summary.
+6. Trigger relevant notifications.
+7. Cancel unnecessary payment reminders if the invoice is settled.
+
+Payment gateway integrations can be added later.
+
+Any payment provider webhook must be verified on the backend before a payment is marked as received.
+
+---
+
+13. PROJECT MANAGEMENT
+
+Every accepted project should have a central project record.
+
+13.1 Project Details
+
+Include:
+
+- Project name.
+- Client.
+- Project type.
+- Description.
+- Accepted quotation.
+- Agreed scope.
+- Contract value.
+- Start date.
+- Expected completion date.
+- Project status.
+- Progress.
+- Milestones.
+- Tasks.
+- Documents.
+- Payments.
+- Activity history.
+
+13.2 Project Stages
+
+Provide configurable stages.
+
+Suggested software development stages:
+
+1. Requirements.
+2. Planning.
+3. Design.
+4. Development.
+5. Internal Testing.
+6. Client Review.
+7. Revisions.
+8. Deployment.
+9. Handover.
+10. Completed.
+
+Allow different project templates for different service types.
+
+13.3 Milestones
+
+Each milestone should have:
+
+- Name.
+- Description.
+- Start date.
+- Due date.
+- Completion date.
+- Status.
+- Weight.
+- Deliverables.
+- Client visibility.
+- Related invoice, if applicable.
+
+13.4 Tasks
+
+Tasks should support:
+
+- Task title.
+- Description.
+- Project.
+- Priority.
+- Status.
+- Start date.
+- Due date.
+- Assigned person.
+- Attachments.
+- Notes.
+
+Task statuses:
+
+- Not Started.
+- In Progress.
+- Waiting.
+- Completed.
+- Cancelled.
+
+13.5 Progress Calculation
+
+Project progress should be calculated from completed milestones or weighted tasks.
+
+Do not let AI invent project progress.
+
+The owner should control the weights and the information visible to clients.
+
+13.6 Project Templates
+
+Allow reusable templates for:
+
+- Website development.
+- Payroll software.
+- Mobile application.
+- Desktop application.
+- Business management system.
+- Maintenance projects.
+
+Templates should generate standard milestones and tasks.
+
+---
+
+14. CLIENT PORTAL
+
+The client portal is a separate, responsive web application.
+
+Clients should access it through a secure link without installing the Android or desktop application.
+
+14.1 Client Access
+
+Generate a unique portal access link for each client or project.
+
+Security requirements:
+
+- Use cryptographically secure random tokens.
+- Never use predictable record IDs as access credentials.
+- Allow token expiry.
+- Allow token revocation.
+- Support reissuing access links.
+- Limit access to the relevant client and project.
+- Avoid exposing internal business information.
+
+Additional authentication, such as an email OTP, can be introduced where appropriate.
+
+14.2 Client Dashboard
+
+Display:
+
+- Project name.
+- Project status.
+- Current milestone.
+- Overall progress.
+- Completed milestones.
+- Upcoming milestones.
+- Estimated completion date.
+- Recent updates.
+- Pending client actions.
+
+14.3 Client Financial Area
+
+Display:
+
+- Accepted quotation.
+- Invoice history.
+- Total project value.
+- Amount paid.
+- Outstanding balance.
+- Payment due dates.
+- Payment history.
+- Receipts.
+- Payment instructions.
+- Payment links, when available.
+
+14.4 Client Documents
+
+Allow clients to access approved documents:
+
+- Quotations.
+- Agreements.
+- Invoices.
+- Receipts.
+- Designs.
+- Deliverables.
+- Handover documents.
+
+The business owner must control what is visible.
+
+14.5 Client Actions
+
+Depending on permissions, clients should be able to:
+
+- Approve quotations.
+- Request quotation revisions.
+- Approve milestones.
+- Review deliverables.
+- Request changes.
+- Upload reference materials.
+- Submit comments.
+- View invoices.
+- Confirm receipt of deliverables.
+
+Record approvals with timestamps and the relevant document version.
+
+14.6 Information Privacy
+
+Never expose:
+
+- Internal notes.
+- Internal discussions.
+- Private task comments.
+- Project expenses.
+- Profit margins.
+- AI conversation logs.
+- Other clients' information.
+- Internal technical documents not approved for sharing.
+
+---
+
+15. AUTOMATED NOTIFICATIONS AND PAYMENT REMINDERS
+
+The system should handle routine communication automatically.
+
+These automations must run on the backend, not depend on the desktop or Android application being open.
+
+15.1 Payment Reminder System
+
+Provide configurable reminder intervals.
+
+Suggested defaults:
+
+Event| Reminder
+Before due date| 5 days before
+Due date| On the due date
+Overdue| 3 days after
+Overdue| 7 days after
+Overdue| 14 days after
+
+Allow the owner to change these intervals.
+
+15.2 Reminder Conditions
+
+Before sending a reminder, the system must:
+
+1. Retrieve the invoice.
+2. Check whether it has been cancelled.
+3. Check whether it has been fully paid.
+4. Calculate the current outstanding balance.
+5. Check whether the reminder has already been sent.
+6. Confirm the communication preference.
+7. Send the appropriate message.
+8. Record the delivery result.
+
+If a client has made a partial payment, the reminder must reflect the updated outstanding balance.
+
+Do not send reminders for settled invoices.
+
+Prevent duplicate messages.
+
+15.3 Communication Channels
+
+Support:
+
+- WhatsApp.
+- Email.
+- In-app notifications for the business owner.
+
+Respect client communication preferences and applicable messaging requirements.
+
+Some WhatsApp business messages may require approved templates and incur charges. These costs must be considered when implementing the integration.
+
+15.4 Project Notifications
+
+Notify clients about meaningful events:
+
+- Project started.
+- Design ready for review.
+- Milestone completed.
+- Approval required.
+- Revised timeline.
+- Delay or important issue.
+- Testing completed.
+- Deployment completed.
+- Project handed over.
+
+Do not notify clients about every internal task.
+
+15.5 Automation History
+
+Every automation should have a record showing:
+
+- Event.
+- Trigger.
+- Action.
+- Recipient.
+- Date and time.
+- Delivery channel.
+- Status.
+- Error, if any.
+- Retry history.
+
+---
+
+16. DOCUMENT MANAGEMENT
+
+Provide a central document repository.
+
+Organise documents by:
+
+- Client.
+- Project.
+- Document type.
+- Date.
+
+Support:
+
+- PDF.
+- DOCX.
+- XLSX.
+- Images.
+- Common document formats.
+
+Generate:
+
+- Quotations.
+- Invoices.
+- Receipts.
+- Scope documents.
+- Agreements.
+- Change requests.
+- Completion reports.
+
+Support upload, preview, download and replacement where appropriate.
+
+Preserve versions of important business documents.
+
+Use controlled access permissions for client-visible documents.
+
+---
+
+17. EXPENSE MANAGEMENT
+
+Track business expenses and project costs.
+
+Examples:
+
+- Hosting.
+- Domain registration.
+- Software subscriptions.
+- API usage.
+- Contractor payments.
+- Project-specific purchases.
+- Transport.
+- Other operating expenses.
+
+Each expense should include:
+
+- Description.
+- Category.
+- Amount.
+- Date.
+- Project, if applicable.
+- Vendor.
+- Payment method.
+- Receipt or evidence.
+- Notes.
+
+17.1 Project Profitability
+
+Calculate:
+
+Project Profit = Project Revenue Collected or Recognised - Associated Project Costs
+
+The reporting logic should clearly identify whether it uses contracted revenue, invoiced revenue or collected revenue.
+
+Do not mix these financial measures.
+
+---
+
+18. REPORTS AND ANALYTICS
+
+Provide useful reports rather than decorative charts.
+
+Business Reports
+
+- Revenue by month.
+- Revenue by service.
+- Outstanding invoices.
+- Overdue invoices.
+- Expense summary.
+- Cash received.
+- Project profitability.
+- Lead conversion.
+- Quotation acceptance rate.
+- Client activity.
+
+Project Reports
+
+- Active projects.
+- Completed projects.
+- Delayed projects.
+- Upcoming deadlines.
+- Milestone completion.
+- Project costs.
+- Project revenue.
+
+Allow filtering by date, client, project and service.
+
+Support PDF and spreadsheet exports where useful.
+
+---
+
+19. AI BUSINESS ASSISTANT
+
+AI should be an optional productivity feature, not the centre of the application.
+
+It should help the business owner perform tasks faster.
+
+19.1 Supported Capabilities
+
+- Natural-language search.
+- Requirements extraction.
+- Conversation summaries.
+- Document extraction.
+- Draft quotation preparation.
+- Project summaries.
+- Client history summaries.
+- Business questions.
+- Voice-based transaction or record entry.
+- Suggested follow-up actions.
+
+Examples:
+
+"Show me all unpaid invoices."
+
+"How much have I collected this month?"
+
+"Summarise the requirements for the payroll project."
+
+"Prepare a draft quotation from this client's requirements."
+
+"Which projects have deadlines this week?"
+
+19.2 Human Approval
+
+AI-generated information must be treated as a draft.
+
+The business owner must approve:
+
+- Quotations.
+- Prices.
+- Agreements.
+- Scope changes.
+- Financial commitments.
+- External messages that make commitments.
+- Important project changes.
+
+19.3 Voice Interaction
+
+Allow the owner to speak commands on Android.
+
+For example:
+
+"Record a payment of fifty thousand naira for the website project."
+
+The system should identify the relevant client, project and invoice.
+
+If important information is missing or ambiguous, ask for clarification.
+
+Do not create financial records based on uncertain interpretation.
+
+---
+
+20. MAINTENANCE AND SUPPORT MANAGEMENT
+
+The system should support work that continues after project delivery.
+
+20.1 Support Requests
+
+Clients should be able to submit support requests through the portal.
+
+Capture:
+
+- Client.
+- Project.
+- Request title.
+- Description.
+- Attachments.
+- Priority.
+- Date submitted.
+- Status.
+
+Suggested statuses:
+
+- New.
+- Acknowledged.
+- In Progress.
+- Waiting for Client.
+- Resolved.
+- Closed.
+
+20.2 Maintenance Contracts
+
+Support recurring maintenance arrangements.
+
+Record:
+
+- Service.
+- Client.
+- Start date.
+- End date.
+- Renewal date.
+- Fee.
+- Payment schedule.
+- Included services.
+- Excluded services.
+
+20.3 Renewal Reminders
+
+Automatically remind the owner and client when maintenance agreements approach renewal.
+
+---
+
+21. AUTOMATION ENGINE
+
+Automation should be a central system capability.
+
+Do not create unrelated, hardcoded automation for every module.
+
+Build a reusable event-driven engine.
+
+21.1 Automation Structure
+
+Each automation should contain:
+
+Trigger → Conditions → Actions
+
+Example:
+
+Trigger:
+Quotation accepted.
+
+Conditions:
+Quotation is valid and has not already been processed.
+
+Actions:
+
+- Convert lead to client.
+- Create project.
+- Attach accepted quotation.
+- Generate project milestones.
+- Prepare deposit invoice.
+- Create client portal.
+- Notify business owner.
+
+21.2 Other Automation Examples
+
+Onboarding Submitted
+
+- Save submission.
+- Update lead.
+- Attach documents.
+- Prepare requirements summary.
+- Notify owner.
+
+Payment Received
+
+- Update invoice.
+- Generate receipt.
+- Update financial records.
+- Cancel unnecessary reminders.
+- Notify client.
+
+Project Milestone Completed
+
+- Update project progress.
+- Notify owner.
+- Notify client if enabled.
+- Request approval if required.
+
+Invoice Overdue
+
+- Check outstanding balance.
+- Send reminder.
+- Update reminder history.
+- Notify owner.
+
+Maintenance Renewal Approaching
+
+- Notify owner.
+- Prepare client reminder.
+
+21.3 Automation Controls
+
+Allow the owner to:
+
+- Enable or disable automations.
+- Configure timing.
+- Set conditions.
+- Select communication channels.
+- View execution history.
+- Retry failed actions.
+- Set human approval requirements.
+
+A visual automation builder can be introduced after the core engine works.
+
+---
+
+22. COMMUNICATION AND ACTIVITY TIMELINE
+
+Every client should have a central activity history.
+
+Record important events such as:
+
+- Enquiry received.
+- Form submitted.
+- Client created.
+- Quotation created.
+- Quotation sent.
+- Revision requested.
+- Quotation accepted.
+- Agreement approved.
+- Invoice issued.
+- Payment received.
+- Project started.
+- Milestone completed.
+- Document uploaded.
+- Message sent.
+- Support request submitted.
+
+Allow the owner to add internal notes.
+
+Clearly distinguish internal notes from client-visible messages.
+
+The activity timeline should provide a reliable history of the business relationship.
+
+---
+
+23. SETTINGS
+
+Provide central configuration for:
+
+Business Profile
+
+- Business name.
+- Logo.
+- Address.
+- Contact details.
+- Currency.
+- Tax details.
+- Bank/payment details.
+
+Financial Settings
+
+- Invoice numbering.
+- Quotation numbering.
+- Default payment terms.
+- Tax rates.
+- Currency formatting.
+- Default payment schedule.
+
+Document Settings
+
+- Quotation templates.
+- Invoice templates.
+- Receipt templates.
+- Agreement templates.
+
+Communication Settings
+
+- WhatsApp connection.
+- Email connection.
+- Notification preferences.
+- Reminder schedules.
+
+AI Settings
+
+- Provider.
+- API key.
+- Model.
+- Usage limits.
+- Spending limits.
+
+Security
+
+- Account management.
+- Session management.
+- Access permissions.
+- Data export.
+- Backup settings.
+
+---
+
+24. TECHNICAL ARCHITECTURE
+
+24.1 Recommended Technology Stack
+
+Component| Technology
+Android| Kotlin
+Desktop| Kotlin + Compose Multiplatform
+UI architecture| MVVM
+Local database| SQLite / Room
+Backend database| Supabase PostgreSQL
+Authentication| Supabase Auth
+File storage| Supabase Storage
+Backend functions| Supabase Edge Functions
+Realtime| Supabase Realtime
+Push notifications| Firebase Cloud Messaging
+Version control| GitHub
+Client portal| Responsive web application
+AI| Replaceable external AI provider
+PDF generation| Dedicated document generation service
+
+The architecture should allow business logic and data models to be shared between Android and desktop where practical.
+
+The client portal should be a separate web interface connected to the same backend.
+
+24.2 Application Architecture
+
+Separate the application into clear layers:
+
+1. Presentation.
+2. Application logic.
+3. Domain/business logic.
+4. Data access.
+5. Backend services.
+
+Do not place business rules directly inside UI components.
+
+Use repositories and service classes to separate data access from business logic.
+
+24.3 Offline Support
+
+Android and desktop should support useful offline operations.
+
+Store relevant data locally.
+
+When connectivity returns:
+
+- Synchronise pending changes.
+- Resolve conflicts.
+- Update records.
+- Preserve important transaction history.
+- Report failed synchronisation.
+
+Financial operations must have appropriate duplicate prevention and conflict handling.
+
+24.4 Backend-First Automation
+
+Critical business processes must execute on the backend.
+
+Do not rely on the Android app or desktop application remaining open for:
+
+- Payment reminders.
+- Project notifications.
+- Scheduled follow-ups.
+- Maintenance renewal alerts.
+- Automation execution.
+
+Use scheduled backend jobs and event processing.
+
+24.5 Multi-Business Readiness
+
+Initially, the system may have one business account.
+
+However, structure the database so that a business or workspace identifier can be added to business records.
+
+This will make future multi-business support easier.
+
+---
+
+25. DATABASE DESIGN REQUIREMENTS
+
+The database should use relational structures and appropriate foreign keys.
+
+The following are the principal entities. Exact column names and normalisation should be finalised during database design.
+
+Entity| Purpose
+businesses| Business workspaces
+users| Application users
+business_members| Users belonging to a business
+clients| Confirmed clients
+leads| Potential clients
+lead_sources| Sources of enquiries
+services| Services offered
+forms| Online form definitions
+form_fields| Form field configuration
+form_submissions| Submitted forms
+conversations| Communication threads
+messages| Individual messages
+quotations| Quotation records
+quotation_items| Quotation line items
+quotation_versions| Quotation revisions
+quotation_approvals| Client decisions
+agreements| Agreements and scope records
+scope_versions| Scope revisions
+change_requests| Additional work requests
+projects| Project records
+project_templates| Reusable project templates
+milestones| Project milestones
+tasks| Project tasks
+invoices| Invoice records
+invoice_items| Invoice line items
+payments| Payment transactions
+receipts| Payment receipts
+expenses| Business expenses
+documents| Document metadata
+document_versions| Document versions
+support_tickets| Client support requests
+maintenance_contracts| Ongoing service agreements
+portal_tokens| Secure client access
+notifications| Notification records
+reminder_schedules| Reminder configuration
+automation_rules| Automation definitions
+automation_runs| Automation execution history
+audit_logs| Important record changes
+ai_usage_logs| AI usage and cost records
+integrations| External service connections
+
+25.1 Important Database Rules
+
+- Use UUIDs for internal record identifiers.
+- Use foreign keys.
+- Use appropriate indexes.
+- Store timestamps consistently.
+- Use explicit status values.
+- Use decimal or numeric types for money.
+- Preserve historical versions of important records.
+- Use soft deletion where records must remain auditable.
+- Apply Row Level Security.
+- Scope all business data to the correct business.
+- Prevent unauthorised access to client information.
+
+The database must not depend on the UI to enforce security.
+
+---
+
+26. SECURITY AND DATA PROTECTION
+
+Security must be designed from the beginning.
+
+Requirements:
+
+- Supabase Row Level Security.
+- Secure authentication.
+- Secure API key storage.
+- No service-role keys in client applications.
+- Server-side permission checks.
+- Secure portal tokens.
+- File access restrictions.
+- Audit logs.
+- Input validation.
+- Rate limiting for public forms.
+- Protection against duplicate submissions.
+- Backup and recovery procedures.
+- Secure webhook verification.
+- Session expiry and revocation.
+
+Never trust a client-side status or payment confirmation without backend verification.
+
+AI providers must only receive the information required to perform the requested task.
+
+---
+
+27. BACKUP AND DATA EXPORT
+
+The business owner must be able to retrieve their business information.
+
+Provide:
+
+- Database backup strategy.
+- Document backup strategy.
+- CSV export.
+- Excel export where appropriate.
+- PDF document exports.
+- Client data export.
+- Financial data export.
+
+Backups should be independent of the primary device.
+
+Google Drive backup can be considered as an optional integration.
+
+Do not make the entire application dependent on a Google Drive connection.
+
+---
+
+28. DEVELOPMENT PHASES
+
+Do not attempt to build every feature simultaneously.
+
+Build in phases while designing the architecture to support the complete product.
+
+PHASE 1: FOUNDATION AND CRM
+
+Build:
+
+- Project structure.
+- Authentication.
+- Business profile.
+- Database foundation.
+- Dashboard.
+- Leads.
+- Clients.
+- Client activity history.
+- Basic settings.
+
+Completion requirement: The owner can manage leads and clients and access their records on desktop and Android.
+
+PHASE 2: ONBOARDING AND QUOTATIONS
+
+Build:
+
+- Form builder.
+- Public onboarding forms.
+- File uploads.
+- Form submissions.
+- Quotation builder.
+- Quotation PDFs.
+- Quotation revisions.
+- Client quotation links.
+- Acceptance and rejection.
+
+Completion requirement: A potential client can submit requirements and receive a quotation for review and approval.
+
+PHASE 3: AGREEMENTS AND FINANCE
+
+Build:
+
+- Scope management.
+- Agreements.
+- Change requests.
+- Invoices.
+- Payment records.
+- Partial payments.
+- Receipts.
+- Financial dashboard.
+
+Completion requirement: The business can manage the commercial and financial side of a project.
+
+PHASE 4: PROJECT MANAGEMENT
+
+Build:
+
+- Project creation.
+- Project templates.
+- Milestones.
+- Tasks.
+- Deadlines.
+- Progress calculation.
+- Project documents.
+- Project activity history.
+
+Completion requirement: An accepted quotation can become a managed project.
+
+PHASE 5: CLIENT PORTAL AND COMMUNICATION
+
+Build:
+
+- Secure client portal.
+- Project tracking.
+- Client-visible milestones.
+- Document access.
+- Client comments.
+- Approvals.
+- Payment history.
+- Invoice access.
+
+Completion requirement: Clients can track projects and access their approved information without installing an application.
+
+PHASE 6: AUTOMATION
+
+Build:
+
+- Event system.
+- Automation engine.
+- Scheduled jobs.
+- Payment reminders.
+- Project notifications.
+- Maintenance reminders.
+- Automation history.
+- Retry mechanisms.
+
+Completion requirement: Important business processes continue working when the owner's devices are offline.
+
+PHASE 7: WHATSAPP AND AI
+
+Build:
+
+- WhatsApp integration.
+- Enquiry assistant.
+- Human handover.
+- Conversational onboarding.
+- AI summaries.
+- Requirements extraction.
+- AI usage tracking.
+- AI business assistant.
+- Voice input.
+
+Completion requirement: AI reduces administrative work without making unauthorised business decisions.
+
+PHASE 8: ADVANCED MANAGEMENT
+
+Build:
+
+- Expense management.
+- Project profitability.
+- Advanced reporting.
+- Support tickets.
+- Maintenance contracts.
+- Advanced automation builder.
+- Additional integrations.
+- Multi-user business access.
+
+Completion requirement: The application can support a more complete and scalable professional service business.
+
+---
+
+29. NON-FUNCTIONAL REQUIREMENTS
+
+The application should meet these requirements:
+
+Performance
+
+- Fast startup.
+- Responsive navigation.
+- Efficient database queries.
+- Pagination for large datasets.
+- Background processing for lengthy tasks.
+- Avoid unnecessary network requests.
+
+Reliability
+
+- Proper error handling.
+- Automatic retry where safe.
+- Duplicate operation prevention.
+- Transaction integrity.
+- Reliable background jobs.
+
+Usability
+
+- Consistent interaction patterns.
+- Minimalist design.
+- Clear status indicators.
+- Useful search.
+- Simple forms.
+- Responsive layouts.
+
+Maintainability
+
+- Modular codebase.
+- Reusable components.
+- Documented business logic.
+- Database migrations.
+- Automated tests.
+- Environment-based configuration.
+
+Accessibility
+
+- Accessible labels for icon-only buttons.
+- Appropriate contrast.
+- Keyboard navigation on desktop.
+- Screen-reader support.
+- Usable text sizes.
+
+---
+
+30. IMPORTANT BUSINESS RULES
+
+These rules must be implemented consistently.
+
+1. A lead is not automatically a confirmed client.
+2. An accepted quotation must be preserved.
+3. A project must have a clear agreed scope.
+4. Additional work should use change requests.
+5. An invoice must not be marked paid without a recorded payment or verified payment confirmation.
+6. Partial payments must update the outstanding balance.
+7. Fully paid invoices must not receive payment reminders.
+8. Payment reminders must use the latest outstanding balance.
+9. Project progress must be based on actual milestones or tasks.
+10. Clients must only see information approved for them.
+11. Internal notes must never appear in the client portal.
+12. AI must not independently approve financial or contractual decisions.
+13. Important business changes must be auditable.
+14. Scheduled automation must run independently of user devices.
+15. Duplicate submissions and duplicate automation executions must be prevented.
+16. Historical financial and contractual records must be preserved.
+
+---
+
+31. DEFINITION OF A SUCCESSFUL FIRST RELEASE
+
+The first useful release should allow the business owner to:
+
+1. Register and configure the business.
+2. Add leads and clients.
+3. Send clients onboarding forms.
+4. Receive and manage project requirements.
+5. Prepare and send quotations.
+6. Record quotation revisions.
+7. Obtain client approval.
+8. Create agreements and project scopes.
+9. Generate invoices.
+10. Record full and partial payments.
+11. Create and manage projects.
+12. Track milestones and tasks.
+13. Share documents.
+14. Give clients secure access to project information.
+15. Track outstanding payments.
+16. Send payment reminders.
+17. View important business activity.
+
+WhatsApp AI, advanced reporting and a visual automation builder can follow after the main workflow is stable.
+
+---
+
+32. DEVELOPMENT INSTRUCTIONS FOR CODEX
+
+The project should be developed incrementally.
+
+Do not ask Codex to generate the entire application in one operation.
+
+Use the following development rules:
+
+1. Read and understand the existing project structure before making changes.
+2. Maintain a clear separation between Android, desktop, shared logic and backend.
+3. Design the database before implementing dependent screens.
+4. Create database migrations.
+5. Implement authentication and security policies early.
+6. Build reusable components.
+7. Keep UI code separate from business logic.
+8. Implement one complete business workflow at a time.
+9. Test every module before moving to the next.
+10. Avoid mock data in production workflows.
+11. Do not introduce unnecessary dependencies.
+12. Do not duplicate business logic across platforms.
+13. Maintain consistent naming and status definitions.
+14. Document important architectural decisions.
+15. Keep a development progress document.
+16. Update the documentation whenever requirements or architecture change.
+
+Required Project Documentation
+
+Maintain these files in the project repository:
+
+- "PRD.md" - Product requirements.
+- "ARCHITECTURE.md" - System architecture.
+- "DATABASE.md" - Database structure and relationships.
+- "UI_UX_GUIDELINES.md" - Design rules for Android, desktop and web.
+- "BUSINESS_RULES.md" - Business logic and workflows.
+- "API_SPECIFICATION.md" - Backend endpoints and contracts.
+- "AUTOMATIONS.md" - Triggers, conditions and actions.
+- "SECURITY.md" - Authentication, permissions and security.
+- "DEVELOPMENT_PLAN.md" - Development phases and progress.
+- "CHANGELOG.md" - Changes made to the system.
+
+Codex should consult these documents before implementing features.
+
+---
+
+FINAL PRODUCT DIRECTION
+
+This is not simply an invoicing application, a project tracker or a CRM.
+
+It is a connected business operating system for a professional service provider.
+
+Its main purpose is to connect clients, communication, quotations, agreements, projects, payments, documents and automation into one organised environment.
+
+The desktop application should provide the full management experience.
+
+The Android application should provide a clean, fast and practical mobile experience.
+
+The client portal should provide clients with visibility and access to their own information.
+
+Automation should handle repetitive work.
+
+AI should assist where it adds genuine value.
+
+The design should remain minimalist, professional and human-designed. Every screen, button, label and feature must have a purpose.

@@ -1,0 +1,6 @@
+{
+  "name": "Freelance Business OS",
+  "description": "Comprehensive business management system for independent tech professionals, managing the complete lifecycle across Desktop, Android, and Client Portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
