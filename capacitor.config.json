@@ -1,0 +1,16 @@
+{
+  "appId": "com.aiconsults.businessos",
+  "appName": "AIConsults Business OS",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  },
+  "android": {
+    "buildOptions": {
+      "keystorePath": "",
+      "keystoreAlias": ""
+    }
+  }
+}

@@ -1,8 +1,17 @@
 node_modules/
 build/
 dist/
+release/
 coverage/
+.aistudio/
 .DS_Store
 *.log
 .env*
 !.env.example
+
+# Android build outputs
+android/.gradle/
+android/build/
+android/app/build/
+*.apk
+*.aab

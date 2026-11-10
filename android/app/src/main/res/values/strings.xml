@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AIConsults Business OS</string>
+    <string name="title_activity_main">AIConsults Business OS</string>
+    <string name="package_name">com.aiconsults.businessos</string>
+    <string name="custom_url_scheme">com.aiconsults.businessos</string>
+</resources>
